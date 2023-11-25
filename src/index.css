@@ -1,0 +1,99 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+body {
+  direction: rtl;
+  font-family: 'vazir' !important;
+}
+
+.header{
+  display: flex;
+  background: cadetblue;
+}
+
+.container{
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+}
+
+.nav ul{
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li{
+  color: #fff;
+  padding-left: 25px;
+}
+
+.switch{
+  display: inline-block;
+  width: 60px;
+  height: 35px;
+  position: relative;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .slider{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ccc;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+  cursor: pointer;
+}
+
+
+.switch .slider::before{
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: #fff;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.switch .slider.round{
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
+
+.switch .slider.round::before{
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
