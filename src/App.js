@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 function App() {
+  const [dark, setDarkMode] = useState(false)
   return (
     <div className="app">
       <header className="header">
@@ -10,7 +13,10 @@ function App() {
               <li>تماس با ما</li>
             </ul>
             <label className="switch">
-              <input type="checkbox" />
+              <input type="checkbox"
+              onChange={()=> setDarkMode(!dark)}
+              
+              />
               <span className="slider round"></span>
             </label>
           </div>
@@ -18,7 +24,13 @@ function App() {
       </header>
       <div className="content">
         <div className="container">
-          <h1>لایت مود فعال است </h1>
+          <h1>
+            {
+              dark ? "دارک مود فعال شده" : "لایت مود فعال است "
+            }
+
+
+          </h1>
           <p>صفحه در حالت لایت مود</p>
         </div>
         <div className="container">
