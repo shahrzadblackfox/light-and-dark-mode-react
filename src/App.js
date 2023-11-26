@@ -1,7 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
+  const getsMode = () =>{
+    const initialMode = localStorage.getItem('mode')
+    if(initialMode== null){
+      if(window.matchMedia("prefers-color-scheme:dark").matchs){
+        return true
+      }else{
+        return false;
+      }
+    }else{
+      return JSON.parse(localStorage.getItem("mode"))
+    }
+  }
   const [dark, setDarkMode] = useState(false)
+  useEffect(()=>{
+    localStorage.setItem("mode", JSON.stringify(dark))
+  },[dark])
+
+
   return (
     <div className={dark ? "app dark-mode": "app"}>
       <header className="header">
