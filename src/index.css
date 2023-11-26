@@ -99,6 +99,25 @@ body {
   -o-border-radius: 34px;
 }
 
+
+input:checked + .slider{
+  background: black;
+}
+
+input:checked + .slider:before{
+  transform: translateX(22px);
+}
+.dark-mode{
+  background: rgb(26,26,26);
+  color:#fff;
+}
+
+.dark-mode .header{
+  background: rgb(23, 74, 75);
+}
+
+
+
 /* content style */
 
 
@@ -126,4 +145,8 @@ body {
   width: 100%;
   height: 300px;
   object-fit: cover;
+}
+
+.dark-mode .card-item{
+  background: rgb(44,44,44);
 }

@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
   const [dark, setDarkMode] = useState(false)
   return (
-    <div className="app">
+    <div className={dark ? "app dark-mode": "app"}>
       <header className="header">
         <div className="container">
           <div className="nav">
@@ -15,6 +15,7 @@ function App() {
             <label className="switch">
               <input type="checkbox"
               onChange={()=> setDarkMode(!dark)}
+              checked = {dark}
               
               />
               <span className="slider round"></span>
